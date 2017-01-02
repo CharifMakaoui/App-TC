@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/splash" />
+
+    <include layout="@layout/ads_native" />
+
+    <LinearLayout
+        android:id="@+id/home_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        tools:context="com.aqua_society.movieprank.Activity_1"
+        android:layout_marginTop="250dp">
+
+
+        <Button android:id="@+id/translated_movies"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="جودة عالية HD"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="40dp"
+            android:textColor="@android:color/white"/>
+
+
+        <Button android:id="@+id/no_translated_movies"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="جودة متوسطة SD"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="40dp"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/ads_bare" />
+</FrameLayout>

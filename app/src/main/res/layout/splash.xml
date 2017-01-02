@@ -1,0 +1,59 @@
+<RelativeLayout android:id="@+id/splashScreen"
+    android:background="@color/grey"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/splashLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/ic_launcher"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="151dp" />
+
+    <TextView
+        android:id="@+id/textLoadingMoviesStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        android:textSize="22sp"
+        android:textColor="@color/colorAccent"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp" />
+
+    <com.eralp.circleprogressview.CircleProgressView
+        android:id="@+id/circle_progress_view"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        app:cpv_circle_color="#27375c"
+        app:cpv_circle_width="6dp"
+        app:cpv_background_circle_width="2dp"
+        app:cpv_background_circle_color="@color/colorAccent"
+        app:cpv_text_prefix="%"
+        app:cpv_text_size="40"
+        app:cpv_text_color="#27375c"
+        android:layout_below="@+id/textLoadingMoviesStart"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:layout_below="@+id/circle_progress_view"
+        android:id="@+id/hidden_splash_button"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:text="حسنا"/>
+
+</RelativeLayout>

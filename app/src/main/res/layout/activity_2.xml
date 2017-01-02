@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/splash"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/ads_native" />
+
+        <RelativeLayout
+            android:id="@+id/home_start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <TextView
+                android:id="@+id/error_loading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="حدث خطأ أثناء الإتصال بالسيرفر المرجو المحاولة بسيرفر أخر"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="20dp"
+                android:visibility="gone" />
+
+            <ListView
+                android:id="@+id/listServeurs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/error_loading"
+                android:divider="#FFF"
+                android:dividerHeight="1dp"
+                android:listSelector="@color/colorPrimary" />
+
+        </RelativeLayout>
+
+        <include layout="@layout/ads_bare" />
+    </LinearLayout>
+
+</FrameLayout>
+
+
